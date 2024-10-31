@@ -1,5 +1,5 @@
 const toolbox = {
-    "kind": "categoryToolbox",
+/*    "kind": "categoryToolbox",
     "contents": [
         {
           "categories": [
@@ -114,7 +114,7 @@ const toolbox = {
             }
           ]
         }
-    ]
+    ]*/
 };
 
 var workspace = Blockly.inject('blockly-workspace', {

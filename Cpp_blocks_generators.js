@@ -1,5 +1,4 @@
 //A function of Cpp block convert to Cpp.
-
 Blockly.Cpp['number'] = function(block) {
     var number = block.getFieldValue('NUMBER');
     return [number, Blockly.Cpp.ORDER_ATOMIC];

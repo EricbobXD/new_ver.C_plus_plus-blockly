@@ -119,6 +119,9 @@ var workspace = Blockly.inject('blockly-workspace', {
     }
 });
 
+Blockly.Cpp = new Blockly.Generator('Cpp');
+Blockly.Cpp.ORDER_ATOMIC = 0; //優先
+
 workspace.addChangeListener(() => {
     updateCodeOutput();
     updateXmlOutput();

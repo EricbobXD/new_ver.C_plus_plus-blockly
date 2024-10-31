@@ -1,19 +1,26 @@
 const toolbox = {
     "kind": "categoryToolbox",
-    "contents": [{
+    "contents": [
+        {
             "kind": "category",
             "name": "Logic",
-            "contents": [{
-                    "kind": "block",
-                    "type": "controls_if"
+            "contents": [
+                {
+                    "kind": "category",
+                    "name": "Logic",
+                    "contents": [
+                        { "kind": "block", "type": "controls_if" },
+                        { "kind": "block", "type": "logic_compare" },
+                        { "kind": "block", "type": "logic_operation" }
+                    ]
                 },
                 {
-                    "kind": "block",
-                    "type": "logic_compare"
-                },
-                {
-                    "kind": "block",
-                    "type": "logic_operation"
+                    "kind": "category",
+                    "name": "Loops",
+                    "contents": [
+                        { "kind": "block", "type": "controls_repeat_ext" },
+                        { "kind": "block", "type": "controls_whileUntil" }
+                    ]
                 }
             ]
         },

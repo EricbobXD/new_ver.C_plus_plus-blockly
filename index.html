@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Blockly Workspace with Code and XML Display</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/9.2.1/blockly.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/9.2.1/blocks_compressed.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/9.2.1/javascript_compressed.js"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="flex">
-    <div class="workspace-container section" id="blockly-workspace"></div>
-    <div class="output-container">
-      <div class="section">
-        <h3 style="font-family: 'Roboto', cursive; color: #000000; margin-bottom: 10px;">
-          Code Output
-          <button onclick="copyText('code-output')">Copy</button>
-          <button onclick="downloadText('code-output', 'code_output.js')">Download</button>
-        </h3>
-        <pre id="code-output" class="code-output"></pre>
-      </div>
-      <div class="section">
-        <h3 style="font-family: 'Roboto', cursive; color: #000000; margin-bottom: 10px;">
-          XML Structure
-          <button onclick="copyText('xml-output')">Copy</button>
-          <button onclick="downloadText('xml-output', 'xml_structure.xml')">Download</button>
-        </h3>
-        <pre id="xml-output" class="xml-output"></pre>
-      </div>
-    </div>
-  </div>
 
+<head>
+    <title>Blockly Workspace with Code and XML Display</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/9.2.1/blockly.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/9.2.1/blocks_compressed.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="flex">
+        <div class="workspace-container section" id="blockly-workspace"></div>
+        <div class="output-container">
+            <div class="section">
+                <h3 style="font-family: 'Roboto', cursive; color: #000000; margin-bottom: 10px;">
+                    Code Output
+                    <button onclick="copyText('code-output')">Copy</button>
+                    <button onclick="downloadText('code-output', 'code_output.js')">Download</button>
+                </h3>
+                <pre id="code-output" class="code-output"></pre>
+            </div>
+            <div class="section">
+                <h3 style="font-family: 'Roboto', cursive; color: #000000; margin-bottom: 10px;">
+                    XML Structure
+                    <button onclick="copyText('xml-output')">Copy</button>
+                    <button onclick="downloadText('xml-output', 'xml_structure.xml')">Download</button>
+                </h3>
+                <pre id="xml-output" class="xml-output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="Cpp_blocks.js"></script>
+    <script src="Cpp_blocks_generator" .js"></script>
 
 </body>
-</html>
 
+</html>

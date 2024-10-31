@@ -1,6 +1,4 @@
 //A function of Cpp block convert to Cpp.
-Blockly.Cpp = new Blockly.Generator('Cpp');
-Blockly.Cpp.ORDER_ATOMIC = 0; //優先
 
 Blockly.Cpp['number'] = function(block) {
     var number = block.getFieldValue('NUMBER');

@@ -1,4 +1,4 @@
-const toolbox = {
+const toolbox = 
     `
         <xml>
                 <category name="vector" colour="230">
@@ -103,7 +103,7 @@ const toolbox = {
                 </category>
         </xml>
     `
-};
+;
 
 var workspace = Blockly.inject('blockly-workspace', {
     toolbox: toolbox,

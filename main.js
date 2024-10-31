@@ -40,7 +40,6 @@ const toolbox = {
     ]
 };
 
-// Initialize Blockly workspace
 var workspace = Blockly.inject('blockly-workspace', {
     toolbox: toolbox,
     scrollbars: true,
@@ -61,7 +60,7 @@ workspace.addChangeListener(() => {
 });
 
 function updateCodeOutput() {
-    var code = Blockly.JavaScript.workspaceToCode(workspace);
+    var code = Blockly.Cpp.workspaceToCode(workspace);
     document.getElementById('code-output').textContent = code;
 }
 
@@ -71,13 +70,11 @@ function updateXmlOutput() {
     document.getElementById('xml-output').textContent = xmlText;
 }
 
-// Copy function
 function copyText(elementId) {
     const text = document.getElementById(elementId).textContent;
     navigator.clipboard.writeText(text).then(() => alert("Copied!"));
 }
 
-// Download function
 function downloadText(elementId, filename) {
     const text = document.getElementById(elementId).textContent;
     const blob = new Blob([text], {

@@ -86,7 +86,7 @@
     };
 
     Blockly.Cpp['return_block'] = function(block) {
-        var returnValue = Blockly.Cpp.valueToCode(block, 'RETURN_VALUE' , 1) || '0';
+        var returnValue = Blockly.Cpp.valueToCode(block, 'RETURN_VALUE', 1) || '0';
         return `return ${returnValue};\n`;
     };
 
@@ -111,7 +111,7 @@
     };
 
     Blockly.Cpp['main_block'] = function(block) {
-        var statements_body = Blockly.Cpp.statementToCode(block , 'BODY');
+        var statements_body = Blockly.Cpp.statementToCode(block, 'BODY');
         return `int main() {\n${statements_body}\n}\n`;
     };
 
@@ -182,19 +182,19 @@
     };
 
     Blockly.Cpp['pop_back'] = function(block) {
-    var name = Blockly.Cpp.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
-    var num = block.getFieldValue('number');
-    return code = name + ".pop_back(" + num + ");\n";
+        var name = Blockly.Cpp.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
+        var num = block.getFieldValue('number');
+        return code = name + ".pop_back(" + num + ");\n";
     };
 
     Blockly.Cpp['clear'] = function(block) {
-    var name = Blockly.Cpp.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
-    return code = name + ".clear();\n";
+        var name = Blockly.Cpp.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
+        return code = name + ".clear();\n";
     };
 
     Blockly.Cpp['size'] = function(block) {
-    var name = Blockly.Cpp.variableDB_.getName(block.getFieldValue('NAME') , Blockly.Variables.NAME_TYPE);
-    return code = name + ".size();\n";
+        var name = Blockly.Cpp.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
+        return code = name + ".size();\n";
     }
 
     /*Blockly.Cpp['emplace_back'] = function(block) {

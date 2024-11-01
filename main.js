@@ -1,4 +1,4 @@
-    const toolbox = 
+    const toolbox =
         `
             <xml>
                     <category name="vector" colour="230">
@@ -85,9 +85,8 @@
                     <category name="測試 Block" colour="290">
                     </category>
             </xml>
-        `
-    ;
-    
+        `;
+
     var workspace = Blockly.inject('blockly-workspace', {
         toolbox: toolbox,
         scrollbars: true,
@@ -101,32 +100,32 @@
             scaleSpeed: 1.2
         }
     });
-    
-    
+
+
     Blockly.Cpp = new Blockly.Generator('Cpp');
     Blockly.Cpp.ORDER_ATOMIC = 0; // Order for atomic values
-    
+
     workspace.addChangeListener(() => {
         updateCodeOutput();
         updateXmlOutput();
     });
-    
+
     function updateCodeOutput() {
         var code = Blockly.Cpp.workspaceToCode(workspace);
         document.getElementById('code-output').textContent = code;
     }
-    
+
     function updateXmlOutput() {
         var xml = Blockly.Xml.workspaceToDom(workspace);
         var xmlText = Blockly.Xml.domToPrettyText(xml);
         document.getElementById('xml-output').textContent = xmlText;
     }
-    
+
     function copyText(elementId) {
         const text = document.getElementById(elementId).textContent;
         navigator.clipboard.writeText(text).then(() => alert("Copied!"));
     }
-    
+
     function downloadText(elementId, filename) {
         const text = document.getElementById(elementId).textContent;
         const blob = new Blob([text], {
@@ -137,7 +136,7 @@
         link.download = filename;
         link.click();
     }
-    
+
     function handleXMLUpload(event) {
         var file = event.target.files[0];
         if (file) {
@@ -150,7 +149,7 @@
             reader.readAsText(file);
         }
     }
-    
+
     function loadCodeFromCPP(event) {
         var file = event.target.files[0];
         if (file) {

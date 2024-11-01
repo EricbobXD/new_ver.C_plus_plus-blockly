@@ -1,7 +1,6 @@
     //Add the Cpp blocks def.
     Blockly.defineBlocksWithJsonArray(
-        [
-            { //cin
+        [{ //cin
                 "type": "cin_block",
                 "message0": "cin >> %1",
                 "args0": [{
@@ -693,16 +692,16 @@
                 "type": "push_back",
                 "message0": "在 %1 新增 %2 在最後一個(只能輸入單個)",
                 "args0": [{
-                            "type": "field_variable",
-                            "name": "NAME2",
-                            "varibale": "myvar",
-                            "varibaleTypes": ["Number", "String"]
-                        },
-                        {
-                            "type": "field_input",
-                            "name": "number",
-                            "text": ""
-                        }
+                        "type": "field_variable",
+                        "name": "NAME2",
+                        "varibale": "myvar",
+                        "varibaleTypes": ["Number", "String"]
+                    },
+                    {
+                        "type": "field_input",
+                        "name": "number",
+                        "text": ""
+                    }
                 ],
                 "inputsInline": true,
                 "output": null,
@@ -710,7 +709,7 @@
                 "nextStatement": null,
                 "colour": 230,
                 "tooltip": "push back number to vector",
-                "helpUrl": "" 
+                "helpUrl": ""
             },
             {
                 "type": "pop_back",
@@ -736,50 +735,48 @@
                     "varibale": "myvar"
                 }, ],
                 "inputsInline": true,
-                "previousStatement": null, 
+                "previousStatement": null,
                 "nextStatement": null,
                 "colour": 230,
                 "tooltip": "vector size",
                 "helpUrl": ""
             },
             {
-            "type" : "size",
-            "message0" : "%1 的陣列大小",
-            "args0" : [
-                {
-                "type" : "field_variable",
-                "name" : "NAME",
-                "variable" : "myvar"
-                }
-            ],
-            "inputsInline": true,
-            "output" : null,
-            "colour": 230,
-            "tooltip": "vector size",
-            "helpUrl": ""
-        },
-        /*{
-            "type": "emplace_back",
-            "message0": "在 %1 新增 %2 在最後一個(可輸入多個 , 用空白分開)",
-            "args0": [
-            {
-                "type": "field_variable",
-                "name": "NAME",
-                "varibale" : "myvar",
-                "varibaleTypes" : ["Number" , "String"]
+                "type": "size",
+                "message0": "%1 的陣列大小",
+                "args0": [{
+                    "type": "field_variable",
+                    "name": "NAME",
+                    "variable": "myvar"
+                }],
+                "inputsInline": true,
+                "output": null,
+                "colour": 230,
+                "tooltip": "vector size",
+                "helpUrl": ""
             },
-            {
-                "type": "field_input",
-                "name": "number",
-                "text": ""
-            }
-            ],
-            "inputsInline": true,
-            "output": null,
-            "nextStatement": null,
-            "colour": 230,
-            "tooltip": "push back number to vector",
-            "helpUrl": ""
-        },*/
+            /*{
+                "type": "emplace_back",
+                "message0": "在 %1 新增 %2 在最後一個(可輸入多個 , 用空白分開)",
+                "args0": [
+                {
+                    "type": "field_variable",
+                    "name": "NAME",
+                    "varibale" : "myvar",
+                    "varibaleTypes" : ["Number" , "String"]
+                },
+                {
+                    "type": "field_input",
+                    "name": "number",
+                    "text": ""
+                }
+                ],
+                "inputsInline": true,
+                "output": null,
+                "nextStatement": null,
+                "colour": 230,
+                "tooltip": "push back number to vector",
+                "helpUrl": ""
+            },*/
         ]
     );
